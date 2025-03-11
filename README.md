@@ -1,54 +1,87 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Шаблон Сайта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современный шаблон сайта на React с использованием лучших практик и инструментов 2025 года.
 
-Currently, two official plugins are available:
+## Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - последняя версия библиотеки
+- **TypeScript** - статическая типизация
+- **Vite 6.2 с SWC** - быстрый сборщик и транспилятор
+- **React Router DOM 7.3** - маршрутизация
+- **styled-components 6.1** - CSS-in-JS стилизация
 
-## Expanding the ESLint configuration
+## Особенности
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✅ **Компонентная архитектура** с разделением на страницы и компоненты
+- ✅ **Темная тема** через ThemeProvider и централизованные переменные
+- ✅ **Code-splitting** с React.lazy и Suspense для оптимизации загрузки
+- ✅ **Адаптивный дизайн** с использованием тематических медиа-запросов
+- ✅ **SEO-оптимизированные** мета-теги для поисковых систем и соцсетей
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Инструменты разработки
+
+- **ESLint** - проверка синтаксиса и обнаружение проблем
+- **Prettier** - автоматическое форматирование кода
+- **Autoprefixer** и **Browserslist** - кросс-браузерная совместимость
+
+## Структура проекта
+
+```
+src/
+├── components/        # Многоразовые компоненты
+│   └── header/        # Компонент заголовка
+├── pages/             # Компоненты страниц
+│   ├── Home/          # Главная страница
+│   ├── About/         # Страница "О нас"
+│   └── Contacts/      # Страница контактов
+├── styles/            # Глобальные стили
+│   ├── GlobalStyles.ts
+│   ├── theme.ts       # Тема приложения
+│   └── styled.d.ts    # Типизация темы
+├── App.tsx            # Корневой компонент с маршрутами
+└── main.tsx           # Точка входа
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Страницы
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Главная** - приветственная страница
+- **О нас** - информация о компании
+- **Контакты** - форма обратной связи
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Установка и запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск режима разработки
+npm run dev
+
+# Сборка для продакшена
+npm run build
+
+# Проверка линтером
+npm run lint
+
+# Предпросмотр собранного проекта
+npm run preview
 ```
+
+## Конфигурация
+
+- vite.config.ts - настройки сборщика
+- .prettierrc.json - правила форматирования кода
+- .browserslistrc - список поддерживаемых браузеров
+- postcss.config.js - конфигурация PostCSS и Autoprefixer
+- eslint.config.js - правила проверки кода
+
+## Оптимизации
+
+- **Разделение кода** для ускорения первоначальной загрузки
+- **Вендорные префиксы** для CSS-свойств
+- **Алиасы** для чистых импортов (`@components`, `@styles`)
+- **Sourcemaps** для упрощения отладки
+
+---
+
+Шаблон подготовлен с учетом современных требований к веб-приложениям, включая производительность, масштабируемость и удобство разработки.
