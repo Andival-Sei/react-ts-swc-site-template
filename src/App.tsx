@@ -11,6 +11,7 @@ import { theme } from "./styles/theme";
 // Импорт страниц
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Contacts from "./pages/Contacts";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
         {/* </Container> */}
       </ThemeProvider>
